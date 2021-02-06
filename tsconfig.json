@@ -1,26 +1,55 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "dist",
+    "module": "esnext",
     "target": "es5",
     "lib": [
+      "es6",
       "dom",
-      "dom.iterable",
       "esnext"
     ],
+    "sourceMap": true,
     "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "downlevelIteration": true,
+    "jsx": "react-jsx",
     "moduleResolution": "node",
+    "rootDir": ".",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "importHelpers": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": false,
     "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ],
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "noEmit": true
+  },
+  "linterOptions": {
+    "exclude": [
+      "node_modules/*"
+    ]
   },
   "include": [
+    "**/src/**/*.ts",
+    "**/src/**/*.tsx",
+    "**/src/**/*.js",
+    "**/src/**/*.jsx",
+    "./types/declaration.d.ts",
     "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }
