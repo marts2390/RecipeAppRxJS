@@ -10,7 +10,7 @@ interface IHomeComponentProps {
 }
 
 const HomeComponent:FC<IHomeComponentProps> = ({ meals }) => (
-  <div>
+  <div className="recipeList">
     <Grid
       container
       spacing={ 3 }
@@ -21,8 +21,7 @@ const HomeComponent:FC<IHomeComponentProps> = ({ meals }) => (
           xs={ 6 }
           sm={ 4 }
           md={ 3 }
-          lg={ 2 }
-          xl={ 1 }
+          xl={ 2 }
           key={ item.idMeal }
         >
           <RecipeCard item={ item } />
