@@ -6,7 +6,11 @@ import { IHomeScreenState } from './stateModel'
 
 
 const defaultAuthState: IHomeScreenState = {
-  isLoading: true,
+  categoriesData: [],
+  mealsData: null,
+  isLoaded: false,
+  mealsLoading: false,
+  currentCategory: 'Beef'
 }
 
 class HomeScreenBloc extends ProtoBloc<IHomeScreenState> implements IHomeScreenService {
@@ -14,8 +18,53 @@ class HomeScreenBloc extends ProtoBloc<IHomeScreenState> implements IHomeScreenS
     super(defaultAuthState)
   }
 
+  initialLoad = async () => {
+    await this.getCategories()
+
+    // Set a default category for initial load
+    await this.getRecipesByCategory(this.state.currentCategory)
+    this.setLoader()
+  }
+
   getCategories = async () => {
-    const categories = await delivery.MealAPI.getCategories()
+    const { value, error } = await delivery.MealAPI.getCategories()
+    const newState = { ...this.state }
+
+    if (error) {
+      console.warn('Request Failed')
+
+      return
+    }
+
+    if (value) {
+      newState.categoriesData = value.categories
+
+      this.pushState(newState)
+    }
+  }
+
+  getRecipesByCategory = async (category: string) => {
+    const { value, error } = await delivery.MealAPI.getRecipesByCategory(category)
+    const newState = { ...this.state }
+
+    if (error) {
+      console.warn('Request Failed')
+
+      return
+    }
+
+    if (value) {
+      newState.mealsData = value.meals
+      newState.currentCategory = category
+      this.pushState(newState)
+    }
+  }
+
+  private setLoader = () => {
+    this.pushState({
+      ...this.state,
+      isLoaded: true,
+    })
   }
 }
 

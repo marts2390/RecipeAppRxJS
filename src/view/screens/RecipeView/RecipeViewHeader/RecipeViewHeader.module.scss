@@ -1,0 +1,65 @@
+@import "src/view/styles/variables.scss";
+
+.header {
+  padding: 1.5em;
+  border-radius: 10px;
+  background-color: $white;
+  margin-bottom: 1em;
+
+  .thumbnailImage {
+    background-position: center;
+    background-size: cover;
+    height: 12em;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .headerContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+      font-size: $font-lg;
+      margin-top: 0;
+      margin-bottom: 0.25em;
+    }
+
+    h3 {
+      font-size: $font-md;
+      font-weight: $font-medium;
+      margin: 0;
+    }
+
+    .buttonGroup {
+      align-items: center;
+      margin-top: 1em;
+
+      @media (min-width: $screen-sm) {
+        display: flex;
+      }
+
+      @media (min-width: $screen-md) {
+        margin-top: 0;
+      }
+
+      .homeButton {
+        margin-bottom: 1em;
+
+        @media (min-width: $screen-sm) {
+          margin-right: 1.5em;
+          margin-bottom: 0;
+        }
+      }
+
+      .button {
+        width: 100%;
+
+        @media (min-width: $screen-sm) {
+          width: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,20 +1,29 @@
 import React, { FC, useEffect } from 'react'
-import Home from 'view/screens/Home'
+import AppRouter from 'view/routers/AppRouter'
+
+import LoaderComponent from 'view/components/Loader'
 
 import styles from './View.module.scss'
 
 interface IAppViewProps {
-  testFunction: () => void
+  initialLoad: () => void
+  isLoaded: boolean;
 }
 
-const AppComponent:FC<IAppViewProps> = ({ testFunction }) => {
+const AppComponent:FC<IAppViewProps> = ({ initialLoad, isLoaded }) => {
   useEffect(() => {
-    testFunction()
+    initialLoad()
   }, [])
 
   return (
-    <div className={ styles.App }>
-      <Home />
+    <div className={ styles.appScreen }>
+      {isLoaded ? (
+        <AppRouter />
+      ) : (
+        <div className={ styles.spinnerContainer }>
+          <LoaderComponent />
+        </div>
+      )}
     </div>
   )
 }

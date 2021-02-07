@@ -1,0 +1,70 @@
+@import 'src/view/styles/variables.scss';
+
+.categoryCard {
+  position: relative;
+  margin: 0 1em;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  height: 7em;
+  overflow: hidden;
+
+  .cardOverlay {
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(black, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: rgba(black, 0.35);
+      cursor: pointer;
+
+      .title {
+        font-size: $font-md;
+        letter-spacing: 2px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .title {
+    color: white;
+    transition: 0.3s ease;
+    font-size: $font-sm;
+    font-weight: 300;
+  }
+}
+
+.categorySlider {
+  display: flex;
+}
+
+.controlButton {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 1.5em;
+  font-size: 2em;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.slider {
+  position: relative;
+}
+
+.nextButton {
+  right: -20px;
+}
+
+.backButton {
+  left: -20px;
+}

@@ -1,0 +1,11 @@
+@import "src/view/styles/variables.scss";
+
+.recipeView {
+  padding: 0.5em;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  @media (min-width: $screen-md) {
+    padding: 2em;
+  }
+}

@@ -6,10 +6,9 @@ class ApiConnector {
 
   constructor() {
     this.connector = Axios.create({
-      baseURL: 'https://www.themealdb.com/api/json/v1/1/',
+      baseURL: '/',
       withCredentials: true,
       headers: {
-        Pragma: 'no-cache',
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },

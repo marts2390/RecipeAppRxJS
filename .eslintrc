@@ -30,7 +30,7 @@
       }
     ],
     "@typescript-eslint/no-explicit-any": [
-      "error",
+      "warn",
       {
         "ignoreRestArgs": true
       }
@@ -63,6 +63,7 @@
         ]
       }
     ],
+    "jsx-a11y/interactive-supports-focus": 0,
     "react/jsx-props-no-spreading": "off",
     "import/prefer-default-export": "off",
     "react/jsx-boolean-value": "off",
@@ -80,6 +81,7 @@
     "@typescript-eslint/semi": [2, "never"],
     "@typescript-eslint/ban-ts-ignore": "off",
     "react/jsx-uses-react": "off",
+    "import/no-named-as-default": 0,
     "@typescript-eslint/comma-dangle": ["error", {
       "arrays": "only-multiline",
       "objects": "only-multiline",

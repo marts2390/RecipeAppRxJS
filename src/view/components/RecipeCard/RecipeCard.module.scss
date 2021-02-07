@@ -1,0 +1,19 @@
+.cardContainer {
+  &:hover {
+    .mealImage {
+      transform: scale(1.1);
+    }
+  }
+
+  .mealImage {
+    transition: 0.3s ease;
+    height: 15em;
+    overflow: hidden;
+  }
+
+  .cardContent {
+    display: flex;
+    align-items: center;
+    min-height: 5em;
+  }
+}
