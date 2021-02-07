@@ -13,8 +13,9 @@ interface IHomeComponentProps {
 
 const HomeComponent:FC<IHomeComponentProps> = ({ categories, getRecipesByCategory }) => (
   <div className={ styles.homeScreen }>
+    <h1>Recipe App</h1>
     <div className={ styles.header }>
-      <h1>Choose Your Recipe!</h1>
+      <h4>Select a Category</h4>
       <Slider
         sliderItems={ categories }
         sliderAction={ getRecipesByCategory }
