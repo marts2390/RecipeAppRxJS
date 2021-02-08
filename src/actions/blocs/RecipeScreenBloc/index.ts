@@ -58,8 +58,11 @@ class RecipeScreenBloc extends ProtoBloc<IRecipeScreenState> implements IRecipeS
         }
       })
 
+      // Remove duplicates values if any
+      const removeDuplicates = ingredientsList.filter((item, index) => ingredientsList.indexOf(item) === index)
+
       // Map ingredients and measures into one string
-      ingredientsList.forEach((item, index) => {
+      removeDuplicates.forEach((item, index) => {
         const string = `${item}: ${ingredientsAmounts[index]}`
         ingredientsFullList.push(string)
       })
