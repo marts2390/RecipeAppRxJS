@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import React, { PureComponent } from 'react'
 import AppRouter from 'view/routers/AppRouter'
 
 import LoaderComponent from 'view/components/Loader'
@@ -10,22 +10,28 @@ interface IAppViewProps {
   isLoaded: boolean;
 }
 
-const AppComponent:FC<IAppViewProps> = ({ initialLoad, isLoaded }) => {
-  useEffect(() => {
-    initialLoad()
-  }, [])
+class AppComponent extends PureComponent<IAppViewProps> {
+  componentDidMount() {
+    const { initialLoad } = this.props
 
-  return (
-    <div className={ styles.appScreen }>
-      {isLoaded ? (
-        <AppRouter />
-      ) : (
-        <div className={ styles.spinnerContainer }>
-          <LoaderComponent />
-        </div>
-      )}
-    </div>
-  )
+    initialLoad()
+  }
+
+  render() {
+    const { isLoaded } = this.props
+
+    return (
+      <div className={ styles.appScreen }>
+        {isLoaded ? (
+          <AppRouter />
+        ) : (
+          <div className={ styles.spinnerContainer }>
+            <LoaderComponent />
+          </div>
+        )}
+      </div>
+    )
+  }
 }
 
 export default AppComponent

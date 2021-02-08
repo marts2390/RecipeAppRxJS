@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import React, { PureComponent } from 'react'
 import UC from 'actions'
 
 import { Match } from 'models/reactRouterDomModel'
@@ -13,18 +13,21 @@ interface IRecipeViewContainerProps {
   match: Match<IRouterProps>;
 }
 
-const RecipeViewContainer:FC<IRecipeViewContainerProps> = ({ match }) => {
-  useEffect(() => {
+class RecipeViewContainer extends PureComponent<IRecipeViewContainerProps> {
+  componentDidMount() {
+    const { match } = this.props
     const { recipeId } = match.params
 
     if (recipeId) {
       UC.RecipeScreenService.getRecipeData(recipeId)
     }
-  })
+  }
 
-  return (
-    <RecipeViewComponent />
-  )
+  render() {
+    return (
+      <RecipeViewComponent />
+    )
+  }
 }
 
 export default RecipeViewContainer
