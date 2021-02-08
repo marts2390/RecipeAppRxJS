@@ -1,5 +1,6 @@
-import React, { PureComponent } from 'react'
+import React, { FC } from 'react'
 import UC from 'actions'
+import { useObservable } from 'rxjs-hooks'
 
 import { Match } from 'models/reactRouterDomModel'
 
@@ -13,21 +14,18 @@ interface IRecipeViewContainerProps {
   match: Match<IRouterProps>;
 }
 
-class RecipeViewContainer extends PureComponent<IRecipeViewContainerProps> {
-  componentDidMount() {
-    const { match } = this.props
-    const { recipeId } = match.params
+const RecipeViewContainer:FC<IRecipeViewContainerProps> = ({ match }) => {
+  const { isLoaded } = useObservable(UC.RecipeScreenService.getSubject) || UC.RecipeScreenService.getCurrentState()
+  const { recipeId } = match.params
 
-    if (recipeId) {
-      UC.RecipeScreenService.getRecipeData(recipeId)
-    }
-  }
-
-  render() {
-    return (
-      <RecipeViewComponent />
-    )
-  }
+  return (
+    <RecipeViewComponent
+      getRecipeData={ UC.RecipeScreenService.getRecipeData }
+      resetState={ UC.RecipeScreenService.setDefaultState }
+      recipeId={ recipeId }
+      isLoaded={ isLoaded }
+    />
+  )
 }
 
 export default RecipeViewContainer

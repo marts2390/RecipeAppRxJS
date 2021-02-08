@@ -12,14 +12,15 @@ interface IRecipeViewHeaderComponentProps {
   category?: string;
   area?: string;
   videoLink?: string;
+  isLoaded: boolean;
 }
 
 const RecipeViewHeaderComponent: FC<IRecipeViewHeaderComponentProps> = ({
-  backgroundImage, title, category, area, videoLink,
+  backgroundImage, title, category, area, videoLink, isLoaded,
 }) => (
   <div className={ styles.recipeView }>
     <Fade
-      in
+      in={ isLoaded }
       timeout={ 500 }
     >
       <div className={ styles.header }>

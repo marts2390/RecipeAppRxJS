@@ -7,7 +7,7 @@ import RecipeViewHeaderComponent from './component'
 
 
 const RecipeViewHeaderContainer:FC = () => {
-  const { recipeData } = useObservable(UC.RecipeScreenService.getSubject)
+  const { recipeData, isLoaded } = useObservable(UC.RecipeScreenService.getSubject)
   || UC.RecipeScreenService.getCurrentState()
 
   return (
@@ -17,6 +17,7 @@ const RecipeViewHeaderContainer:FC = () => {
       category={ recipeData?.strCategory }
       area={ recipeData?.strArea }
       videoLink={ recipeData?.strYoutube }
+      isLoaded={ isLoaded }
     />
   )
 }

@@ -11,4 +11,5 @@ export interface IHomeScreenService {
 
 export interface IRecipeScreenService {
   getRecipeData: (id: string) => void;
+  setDefaultState: () => void;
 }

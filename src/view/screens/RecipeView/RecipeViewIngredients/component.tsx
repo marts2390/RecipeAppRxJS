@@ -7,13 +7,14 @@ import styles from './RecipeViewIngredients.module.scss'
 interface IRecipeViewIngredientsComponentProps {
   ingredientsList: string[]
   recipeMethod: string | null;
+  isLoaded: boolean;
 }
 
 const RecipeViewIngredientsComponent: FC<IRecipeViewIngredientsComponentProps> = ({
-  ingredientsList, recipeMethod,
+  ingredientsList, recipeMethod, isLoaded,
 }) => (
   <Fade
-    in
+    in={ isLoaded }
     timeout={ 500 }
   >
     <div className={ styles.ingredientsContainer }>

@@ -6,14 +6,15 @@ import { ProtoBloc } from '../ProtoBloc'
 import { IRecipeScreenState } from './stateModel'
 
 
-const defaultAuthState: IRecipeScreenState = {
+const defaultRecipeScreenState: IRecipeScreenState = {
   recipeData: null,
   ingredientsList: [],
+  isLoaded: false,
 }
 
 class RecipeScreenBloc extends ProtoBloc<IRecipeScreenState> implements IRecipeScreenService {
   constructor() {
-    super(defaultAuthState)
+    super(defaultRecipeScreenState)
   }
 
   getRecipeData = async (id: string) => {
@@ -24,6 +25,11 @@ class RecipeScreenBloc extends ProtoBloc<IRecipeScreenState> implements IRecipeS
 
       return
     }
+
+    this.pushState({
+      ...this.state,
+      isLoaded: false,
+    })
 
     if (value) {
       const ingredientsList: IRecipeDataModel[] = []
@@ -61,8 +67,13 @@ class RecipeScreenBloc extends ProtoBloc<IRecipeScreenState> implements IRecipeS
       this.pushState({
         recipeData: value.meals[0],
         ingredientsList: ingredientsFullList,
+        isLoaded: true,
       })
     }
+  }
+
+  setDefaultState = () => {
+    this.pushState(defaultRecipeScreenState)
   }
 }
 

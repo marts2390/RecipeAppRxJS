@@ -5,7 +5,7 @@ import { ProtoBloc } from '../ProtoBloc'
 import { IHomeScreenState } from './stateModel'
 
 
-const defaultAuthState: IHomeScreenState = {
+const defaultHomeScreenState: IHomeScreenState = {
   categoriesData: [],
   mealsData: null,
   isLoaded: false,
@@ -15,7 +15,7 @@ const defaultAuthState: IHomeScreenState = {
 
 class HomeScreenBloc extends ProtoBloc<IHomeScreenState> implements IHomeScreenService {
   constructor() {
-    super(defaultAuthState)
+    super(defaultHomeScreenState)
   }
 
   initialLoad = async () => {

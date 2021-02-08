@@ -6,13 +6,14 @@ import UC from 'actions'
 import RecipeViewIngredientsComponent from './component'
 
 const RecipeViewIngredientsContainer:FC = () => {
-  const { recipeData, ingredientsList } = useObservable(UC.RecipeScreenService.getSubject)
+  const { recipeData, ingredientsList, isLoaded } = useObservable(UC.RecipeScreenService.getSubject)
 || UC.RecipeScreenService.getCurrentState()
 
   return (
     <RecipeViewIngredientsComponent
       ingredientsList={ ingredientsList }
       recipeMethod={ recipeData && recipeData.strInstructions }
+      isLoaded={ isLoaded }
     />
   )
 }
