@@ -1,12 +1,12 @@
 
 import connector from './connector'
-import MealAPI from './MealAPI'
-import IMealAppCore from './interfaces'
+import WeatherAPIActions from './WeatherAPI'
+import IWeatherAppCore from './interfaces'
 
-class RecipeAppCore implements IMealAppCore {
+class WeatherAppCore implements IWeatherAppCore {
   connector = connector
 
-  MealAPI = MealAPI
+  WeatherAPI = WeatherAPIActions
 }
 
-export default new RecipeAppCore()
+export default new WeatherAppCore()

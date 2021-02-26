@@ -1,11 +1,8 @@
-import HomeScreenBloc from 'actions/blocs/HomeScreenBloc'
-import RecipeScreenBloc from 'actions/blocs/RecipeScreenBloc'
-import { IActions } from './interface'
+import { IActions } from 'actions/layerInterface'
+import WeatherAppService from 'actions/reactStoreServices/WeatherAppBloc'
 
-class UseCases implements IActions {
-  HomeScreenService = HomeScreenBloc
-
-  RecipeScreenService = RecipeScreenBloc
+class Actions implements IActions {
+  WeatherAppService = WeatherAppService
 }
 
-export default new UseCases()
+export default new Actions()

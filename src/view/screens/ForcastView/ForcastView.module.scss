@@ -1,0 +1,47 @@
+@import "src/view/styles/variables.scss";
+
+.forecastScreen {
+  &.isLoading {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .title {
+    padding-bottom: 1em;
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 0;
+    }
+  }
+
+  .filters {
+    background-color: $white;
+    padding: 1.5em;
+    border-radius: 3px;
+    margin-bottom: 1.5em;
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .input {
+      margin-right: 1em;
+    }
+
+    .button {
+      margin-top: 1em;
+
+      @media (min-width: $screen-sm) {
+        margin-top: 0;
+      }
+    }
+  }
+}

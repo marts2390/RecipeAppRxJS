@@ -1,0 +1,46 @@
+@import "src/view/styles/variables.scss";
+
+.widgetContainer {
+  background-color: $white;
+  border-radius: 3px;
+  padding: 1.5em;
+  min-height: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .infoContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    svg {
+      font-size: 2rem;
+      margin-right: 1.5em;
+    }
+
+    .wind {
+      color: $grey;
+    }
+
+    .rain {
+      color: $dark-blue;
+    }
+
+    .snow {
+      color: $ice-blue;
+    }
+
+    .sun {
+      color: $orange;
+    }
+  }
+}

@@ -2,10 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.scss'
 import App from 'view/index'
+import { StoreProvider } from 'data'
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
-  <App />,
+  <StoreProvider>
+    <App />
+  </StoreProvider>,
   document.getElementById('root')
 )
 

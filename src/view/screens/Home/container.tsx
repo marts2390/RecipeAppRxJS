@@ -1,16 +1,18 @@
 import React, { FC } from 'react'
-import { useObservable } from 'rxjs-hooks'
-import UC from 'actions'
+import Actions from 'actions'
+import { useStore, useDispatch } from 'data'
 
 import HomeComponent from './component'
 
 const HomeContainer:FC = () => {
-  const { categoriesData } = useObservable(UC.HomeScreenService.getSubject) || UC.HomeScreenService.getCurrentState()
+  const { WeatherAppStore: { weatherData, isLoaded } } = useStore()
+  const dispatch = useDispatch()
 
   return (
     <HomeComponent
-      categories={ categoriesData }
-      getRecipesByCategory={ UC.HomeScreenService.getRecipesByCategory }
+      weatherData={ weatherData }
+      isLoaded={ isLoaded }
+      initialLoad={ Actions.WeatherAppService.initialLoad(dispatch) }
     />
   )
 }

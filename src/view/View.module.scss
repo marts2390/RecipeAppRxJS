@@ -1,10 +1,11 @@
+@import "src/view/styles/variables.scss";
+
 .appScreen {
-  .spinnerContainer {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 0.5em;
+  max-width: $screen-lg;
+  margin: 0 auto;
+
+  @media (min-width: $screen-md) {
+    padding: 2em;
   }
 }

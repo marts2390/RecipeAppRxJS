@@ -1,9 +1,8 @@
-export interface IMealAPIActions {
-  getCategories: () => void;
-  getRecipesByCategory: (category: string) => void;
-  getRecipeData: (id:string) => void;
+export interface IWeatherAPIActions {
+  getWeatherByCity: (cityId: string) => void;
+  getWeatherForecast: (cityId: string, days: number) => void;
 }
 
-export default interface IMealAppCore {
-  MealAPI: IMealAPIActions;
+export default interface IWeatherAppCore {
+  WeatherAPI: IWeatherAPIActions;
 }

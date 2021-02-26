@@ -1,0 +1,21 @@
+@import "src/view/styles/variables.scss";
+
+.forcastItem {
+  padding: 1.5em;
+  background-color: $white;
+  border-radius: 3px;
+
+  .itemImage {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 7em;
+    }
+
+    p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

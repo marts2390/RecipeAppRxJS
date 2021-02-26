@@ -1,0 +1,48 @@
+@import "src/view/styles/variables.scss";
+
+.widgetContainer {
+  background: $white;
+  padding: 1.5em;
+  border-radius: 5px;
+  min-height: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2,
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .weatherText {
+    font-size: $font-xxl;
+  }
+
+  .sunInfo {
+    display: flex;
+    align-items: center;
+
+    .sunriseItem {
+      display: flex;
+      align-items: center;
+      margin-left: 1em;
+
+      svg {
+        font-size: 2rem;
+        margin-right: 0.25em;
+      }
+
+      .sun {
+        color: $orange;
+      }
+
+      .moon {
+        color: $grey;
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom'
 
 import HomeScreen from 'view/screens/Home'
-import RecipeScreen from 'view/screens/RecipeView'
+import ForcastView from 'view/screens/ForcastView'
 
 const GeneralRouterComponent: FC = () => (
   <BrowserRouter>
@@ -16,8 +16,8 @@ const GeneralRouterComponent: FC = () => (
       />
       <Route
         exact
-        path="/recipes/:recipeId"
-        component={ RecipeScreen }
+        path="/forecast"
+        component={ ForcastView }
       />
       <Redirect to="/" />
     </Switch>
