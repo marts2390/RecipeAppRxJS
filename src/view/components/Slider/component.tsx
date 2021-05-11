@@ -66,6 +66,7 @@ const SliderComponent: FC<ISliderComponentProps> = ({ sliderItems, sliderAction 
               style={ { backgroundImage: `url(${item.strCategoryThumb})` } }
             >
               <div
+                data-testid={ `recipe-card-${index}` }
                 role="button"
                 onKeyDown={ (e) => e.key === 'Enter' && sliderAction(item.strCategory) }
                 className={ styles.cardOverlay }

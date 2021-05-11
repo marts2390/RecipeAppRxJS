@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://www.themealdb.com/api/json/v1/1/",
+  "jest": {
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
@@ -11,14 +14,17 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
-    "@types/jest": "^26.0.20",
     "@types/node": "^12.19.16",
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.0",
     "axios": "^0.19.1",
     "classnames": "^2.2.6",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
     "node-sass": "^5.0.0",
     "pure-react-carousel": "^1.27.6",
+    "raf": "^3.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.2.0",
@@ -54,6 +60,9 @@
   },
   "devDependencies": {
     "@types/classnames": "^2.2.11",
+    "@types/enzyme": "^3.10.8",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/jest": "^26.0.22",
     "@types/react-router-dom": "^5.1.7",
     "@types/react-slick": "^0.23.4",
     "@typescript-eslint/eslint-plugin": "4.14.2",
@@ -74,6 +83,7 @@
     "stylelint": "^13.2.1",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^20.0.0",
-    "stylelint-order": "^4.0.0"
+    "stylelint-order": "^4.0.0",
+    "ts-jest": "^26.5.5"
   }
 }

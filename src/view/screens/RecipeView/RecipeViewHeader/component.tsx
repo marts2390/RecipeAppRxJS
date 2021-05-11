@@ -22,6 +22,7 @@ const RecipeViewHeaderComponent: FC<IRecipeViewHeaderComponentProps> = ({
     <Fade
       in={ isLoaded }
       timeout={ 500 }
+      data-testid="fadeElem"
     >
       <div className={ styles.header }>
         <Grid

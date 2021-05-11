@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Recipe header is rendered 1`] = `
+<div
+  className="recipeView"
+>
+  <ForwardRef(Fade)
+    data-testid="fadeElem"
+    in={false}
+    timeout={500}
+  >
+    <div
+      className="header"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignContent="flex-start"
+        container={true}
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          md={3}
+          sm={4}
+          xs={12}
+        >
+          <div
+            className="thumbnailImage"
+            style={
+              Object {
+                "backgroundImage": "url(undefined)",
+              }
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          md={9}
+          sm={8}
+          xs={12}
+        >
+          <div
+            className="headerContent"
+          >
+            <div>
+              <h2 />
+              <h3>
+                Area: undefined
+              </h3>
+              <h3>
+                Category: undefined
+              </h3>
+            </div>
+            <div
+              className="buttonGroup"
+            >
+              <Link
+                to="/"
+              >
+                <WithStyles(ForwardRef(Button))
+                  className="homeButton button"
+                  color="primary"
+                  variant="contained"
+                >
+                  Take me back
+                </WithStyles(ForwardRef(Button))>
+              </Link>
+              <a
+                rel="noreferrer"
+                target="_blank"
+              >
+                <WithStyles(ForwardRef(Button))
+                  className="button"
+                  color="secondary"
+                  variant="contained"
+                >
+                  Watch the Method
+                </WithStyles(ForwardRef(Button))>
+              </a>
+            </div>
+          </div>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+  </ForwardRef(Fade)>
+</div>
+`;

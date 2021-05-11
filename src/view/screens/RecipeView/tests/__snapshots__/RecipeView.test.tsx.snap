@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Recipe View is rendered with data 1`] = `
+<div>
+  <div
+    className="recipeView"
+  >
+    <RecipeViewHeaderContainer />
+    <RecipeViewIngredientsContainer />
+  </div>
+</div>
+`;
+
+exports[`Should display loader 1`] = `
+<div>
+  <div
+    className="spinnerContainer"
+  >
+    <LoaderComponent />
+  </div>
+</div>
+`;

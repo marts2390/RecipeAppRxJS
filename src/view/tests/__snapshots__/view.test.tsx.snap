@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render loader 1`] = `
+<div
+  className="appScreen"
+>
+  <div
+    className="spinnerContainer"
+  >
+    <LoaderComponent />
+  </div>
+</div>
+`;
+
+exports[`should render router 1`] = `
+<div
+  className="appScreen"
+>
+  <GeneralRouterComponent />
+</div>
+`;

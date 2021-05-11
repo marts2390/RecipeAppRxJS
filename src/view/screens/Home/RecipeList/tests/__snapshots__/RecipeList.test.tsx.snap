@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render recipe list 1`] = `
+<div
+  className="recipeList"
+>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    spacing={3}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="52874"
+      md={3}
+      sm={4}
+      xl={2}
+      xs={6}
+    >
+      <RecipeCardContainer
+        item={
+          Object {
+            "idMeal": "52874",
+            "strMeal": "Beef and Mustard Pie",
+            "strMealThumb": "https://www.themealdb.com/images/media/meals/sytuqu1511553755.jpg",
+          }
+        }
+      />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="52878"
+      md={3}
+      sm={4}
+      xl={2}
+      xs={6}
+    >
+      <RecipeCardContainer
+        item={
+          Object {
+            "idMeal": "52878",
+            "strMeal": "Beef and Oyster pie",
+            "strMealThumb": "https://www.themealdb.com/images/media/meals/wrssvt1511556563.jpg",
+          }
+        }
+      />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="52997"
+      md={3}
+      sm={4}
+      xl={2}
+      xs={6}
+    >
+      <RecipeCardContainer
+        item={
+          Object {
+            "idMeal": "52997",
+            "strMeal": "Beef Banh Mi Bowls with Sriracha Mayo, Carrot & Pickled Cucumber",
+            "strMealThumb": "https://www.themealdb.com/images/media/meals/z0ageb1583189517.jpg",
+          }
+        }
+      />
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</div>
+`;

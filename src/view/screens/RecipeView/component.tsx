@@ -15,11 +15,7 @@ interface IRecipeViewComponentProps {
 
 class RecipeViewComponent extends PureComponent<IRecipeViewComponentProps> {
   componentDidMount() {
-    const { getRecipeData, recipeId } = this.props
-
-    if (recipeId) {
-      getRecipeData(recipeId)
-    }
+    this.getData()
   }
 
   componentWillUnmount() {
@@ -28,10 +24,18 @@ class RecipeViewComponent extends PureComponent<IRecipeViewComponentProps> {
     resetState()
   }
 
+  getData = () => {
+    const { getRecipeData, recipeId } = this.props
+
+    if (recipeId) {
+      getRecipeData(recipeId)
+    }
+  }
+
   render() {
     const { isLoaded } = this.props
     return (
-      <>
+      <div>
         {isLoaded ? (
           <div className={ styles.recipeView }>
             <RecipeViewHeader />
@@ -42,7 +46,7 @@ class RecipeViewComponent extends PureComponent<IRecipeViewComponentProps> {
             <Loader />
           </div>
         )}
-      </>
+      </div>
     )
   }
 }

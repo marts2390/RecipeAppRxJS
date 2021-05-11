@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ingredients list is rendered 1`] = `
+<ForwardRef(Fade)
+  data-testid="ingredientWrapper"
+  in={false}
+  timeout={500}
+>
+  <div
+    className="ingredientsContainer"
+  >
+    <WithStyles(ForwardRef(Grid))
+      container={true}
+      spacing={2}
+    >
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        md={3}
+        xs={12}
+      >
+        <div
+          className="ingredientsList"
+        >
+          <h4>
+            Ingredients
+          </h4>
+          <div
+            className="ingredientsItem"
+          >
+            <WithStyles(ForwardRef(Grid))
+              container={true}
+              spacing={2}
+            >
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                key="ingredient1"
+                md={12}
+                sm={4}
+                xs={6}
+              >
+                <p>
+                  ingredient1
+                </p>
+              </WithStyles(ForwardRef(Grid))>
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                key="ingredient2"
+                md={12}
+                sm={4}
+                xs={6}
+              >
+                <p>
+                  ingredient2
+                </p>
+              </WithStyles(ForwardRef(Grid))>
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                key="ingredient3"
+                md={12}
+                sm={4}
+                xs={6}
+              >
+                <p>
+                  ingredient3
+                </p>
+              </WithStyles(ForwardRef(Grid))>
+            </WithStyles(ForwardRef(Grid))>
+          </div>
+        </div>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        md={9}
+        xs={12}
+      >
+        <div
+          className="instructions"
+        >
+          <h4>
+            Method
+          </h4>
+          <p>
+            This is the recipe method
+          </p>
+        </div>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </div>
+</ForwardRef(Fade)>
+`;

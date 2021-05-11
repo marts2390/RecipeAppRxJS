@@ -16,6 +16,7 @@ const RecipeViewIngredientsComponent: FC<IRecipeViewIngredientsComponentProps> =
   <Fade
     in={ isLoaded }
     timeout={ 500 }
+    data-testid="ingredientWrapper"
   >
     <div className={ styles.ingredientsContainer }>
       <Grid

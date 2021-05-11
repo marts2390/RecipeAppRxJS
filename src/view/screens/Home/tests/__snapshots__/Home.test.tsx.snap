@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page is rendered 1`] = `
+<HomeComponent
+  categories={Array []}
+  getRecipesByCategory={[Function]}
+/>
+`;

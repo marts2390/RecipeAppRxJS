@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render recipeCard 1`] = `
+<Link
+  to="/recipes/52874"
+>
+  <ForwardRef(Fade)
+    in={true}
+    timeout={500}
+  >
+    <WithStyles(ForwardRef(Card))
+      className="cardContainer"
+    >
+      <WithStyles(ForwardRef(CardActionArea))>
+        <WithStyles(ForwardRef(CardMedia))
+          className="mealImage"
+          image="https://www.themealdb.com/images/media/meals/sytuqu1511553755.jpg"
+          title="Beef and Mustard Pie"
+        />
+        <WithStyles(ForwardRef(CardContent))
+          className="cardContent"
+        >
+          <p>
+            Beef and Mustard Pie
+          </p>
+        </WithStyles(ForwardRef(CardContent))>
+      </WithStyles(ForwardRef(CardActionArea))>
+    </WithStyles(ForwardRef(Card))>
+  </ForwardRef(Fade)>
+</Link>
+`;
